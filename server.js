@@ -21,3 +21,5 @@ app.get("/sensor", (req, res) => {
 
     res.send("OK")
 })
+
+const PORT = process.env.PORT || 3000
