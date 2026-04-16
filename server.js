@@ -1,7 +1,15 @@
 const express = require("express")
 const app = express()
 
+let dados = []
+
 app.get("/sensor", (req, res) => {
+    const {temp, hum} = req.query
+
+    if(!temp || !hum){
+        return res.status(400).send("Dados inválidos!")
+    }
+    
     const leitura = {
         temperatura: temp,
         umidade: hum,
