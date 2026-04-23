@@ -26,6 +26,6 @@ app.get("/sensor", (req, res) => {
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, () => {scrollX
+app.listen(PORT, () => {
     console.log("Servidor rodando!")
 })
