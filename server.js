@@ -9,6 +9,8 @@ app.get("/sensor", (req, res) => {
     if(!temp || !hum){
         return res.status(400).send("Dados inválidos!")
     }
+
+    console.log(`Temp: ${temp} | Umidade: ${hum}`)
     
     const leitura = {
         temperatura: temp,
@@ -23,3 +25,7 @@ app.get("/sensor", (req, res) => {
 })
 
 const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => {scrollX
+    console.log("Servidor rodando!")
+})
